@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
       newPost: any='No Content';
       enteredValue: any;
 
-  onAddPost(postInput: HTMLTextAreaElement){
-        console.log("console log: " +postInput.value);
-        console.dir(postInput.value);
+  onAddPost(){
+        this.newPost = this.enteredValue;
+        console.log(this.newPost);
         }
 }
