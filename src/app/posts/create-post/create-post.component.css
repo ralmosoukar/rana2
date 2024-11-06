@@ -1,10 +1,38 @@
-
 mat-card {
   width: 50%;
   margin:auto;
   background-color:#c7ace3;
-  padding: 5px;
+  padding: 16px;
+  border: 2px rebeccapurple dotted;
+  border-radius: 30px;
 
 }
-
+form{
+  width: 50%;
+  margin:auto;
+  display:flex;
+}
+form {
+  width:50%;
+  margin:auto;
+  display:grid;
+}
+input{
+  background-color: thistle;
+  text-indent: 1em;
+  padding: 1px;
+  outline: 8px groove rebeccapurple;
+  border-radius: 2px;
+}
+button{
+  border-radius: 25%;
+  width:25%;
+}
+textarea{
+  background-color:   thistle;
+    text-indent: 1em;
+  padding: 5px;
+  outline: 8px groove rebeccapurple;
+  border-radius: 6px;
+}
 
