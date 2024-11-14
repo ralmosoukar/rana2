@@ -1,8 +1,17 @@
-mat-accordion{
-  margin:auto;
-  width:50%;
+:host {
+  display: block;
+  margin-top: 1rem;
 }
 
-.mat-body-1{
-  text-align:center;
+mat-accordion {
+  margin: auto;
+  width: 50%;
+}
+
+.mat-body-1 {
+  text-align: center;
+}
+
+mat-spinner {
+  margin: auto;
 }

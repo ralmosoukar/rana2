@@ -20,6 +20,9 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 
 
@@ -32,27 +35,30 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
     FooterComponent,
     CreatePostComponent,
     PostListComponent,
+    LoginComponent,
+    SignupComponent,
 
   ],
-  imports: [
-  // <!-- ActivatedRoute -->,
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatExpansionModule,
-    MatMenuModule,
-    RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
+    imports: [
+        // <!-- ActivatedRoute -->,
+        AppRoutingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatExpansionModule,
+        MatMenuModule,
+        RouterOutlet,
+        RouterLink,
+        RouterLinkActive,
+        MatProgressSpinnerModule,
 
-  ],
+    ],
   providers: []
 })
 export class AppModule { }
