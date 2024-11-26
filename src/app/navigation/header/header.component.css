@@ -24,3 +24,7 @@ ul {
   list-style: none;
 }
 
+.active {
+  color: #f38c23 !important;
+  font-weight: bold;
+}

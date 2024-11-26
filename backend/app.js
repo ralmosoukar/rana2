@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import postRoutes from './routes/post.js';
-
+import userRoutes from './routes/user.js';
 import Post from './model/post.js'
 //import post from "./model/post.js";
 
@@ -26,7 +26,7 @@ app.use((req,res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
       'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept'
+      'Origin, X-Requested-With, Content-Type, Accept, Authorization'
 );
   res.setHeader(
     "Access-Control-Allow-Methods" ,
@@ -36,5 +36,6 @@ app.use((req,res, next) => {
 });
 
 app.use('/api/posts', postRoutes);
+app.use('/api/user', userRoutes);
 
 export default app;

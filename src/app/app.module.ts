@@ -8,7 +8,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { CreatePostComponent } from './posts/create-post/create-post.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
@@ -16,13 +16,13 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatExpansionModule} from "@angular/material/expansion";
-//import { NavbarComponent } from './navigation/navbar/navbar.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import {MatMenuModule} from "@angular/material/menu";
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import {AuthInterceptor} from "./auth/auth-interceptor";
 
 
 
@@ -59,6 +59,7 @@ import { SignupComponent } from './auth/signup/signup.component';
         MatProgressSpinnerModule,
 
     ],
-  providers: []
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}],
+
 })
 export class AppModule { }
