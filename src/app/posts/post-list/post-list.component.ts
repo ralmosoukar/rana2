@@ -17,15 +17,15 @@ import {AuthService} from "../../auth/auth.service";
 export class PostListComponent implements OnInit, OnDestroy {
   posts: Post[] = [];
   isLoading: boolean = false;
-  userIsAuthenticated:boolean = false;
+  userIsAuthenticated: boolean = false;
   private postSub: Subscription;
   private authStatusSub: Subscription;
 
   constructor(public postService: PostService, private authService: AuthService) {
     this.postSub = new Subscription();
-    this.authStatusSub = this.authService.getAuthStatusListener().subscribe ((status: boolean)=>{
+    this.authStatusSub = this.authService.getAuthStatusListener().subscribe((status: boolean) => {
       this.userIsAuthenticated = status;
-        });
+    });
   }
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class PostListComponent implements OnInit, OnDestroy {
       });
 
     this.userIsAuthenticated = this.authService.getIsAuth();
-    this.authStatusSub = this.authService.getAuthStatusListener().subscribe((status:boolean)=>{
+    this.authStatusSub = this.authService.getAuthStatusListener().subscribe((status: boolean) => {
       this.userIsAuthenticated = status;
     });
   }
