@@ -1,6 +1,5 @@
 import express from 'express';
 import Post from '../model/post.js'
-import app from "../app.js";
 import checkAuth from "../middleware/check-auth.js";
 
 const router = express.Router();

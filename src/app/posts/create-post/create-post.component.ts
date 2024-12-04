@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, NgForm} from "@angular/forms";
+import {NgForm} from "@angular/forms";
 import {PostService} from "../post.service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
 import {Post} from "../post.model";
@@ -46,7 +46,7 @@ export class CreatePostComponent implements OnInit {
       form.resetForm();
     } else {
       this.postService.updatePost(this.postId, form.value.title, form.value.content);
-     // console.log('update');
+
     }
 
 

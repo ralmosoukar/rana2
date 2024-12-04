@@ -3,7 +3,7 @@ import {Injectable} from "@angular/core";
 import {Subject} from "rxjs";
 import {map} from "rxjs/operators"
 import {HttpClient} from "@angular/common/http";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 
 @Injectable({providedIn: 'root'})

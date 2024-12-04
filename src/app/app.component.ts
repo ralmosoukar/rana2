@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from "./auth/auth.service";
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,9 +17,4 @@ export class AppComponent implements OnInit {
   }
 }
 
-//export class AppComponent {
-  //title:string = 'RaNa';
- // newPost:any = 'New Post';
-//anAddPost(postInput: any) {
- // console.dir(postInput);
 

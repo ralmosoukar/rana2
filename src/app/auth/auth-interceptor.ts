@@ -1,4 +1,4 @@
-import {HttpHandler, HttpHeaders, HttpInterceptor, HttpRequest} from "@angular/common/http";
+import {HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {AuthService} from "./auth.service";
 import {Injectable} from "@angular/core";
 
@@ -9,6 +9,9 @@ export class AuthInterceptor implements HttpInterceptor {
 
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
+    if(req.url.includes('dictionaryapi.dev')){
+      return next.handle(req);
+    }
     const authToken = this.authService.getToken();
     const authRequest = req.clone({
       headers: req.headers.set('authorization', 'Bearer ' + authToken)

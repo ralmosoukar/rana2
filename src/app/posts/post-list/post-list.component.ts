@@ -3,11 +3,7 @@ import {PostService} from '../post.service'
 import {Post} from "../post.model";
 import {Subscription} from "rxjs";
 import {AuthService} from "../../auth/auth.service";
-//import {ActivatedRoute} from "@angular/router";
-//import {AuthService} from "../../auth/auth.service";
 
-//class authService {
-//}
 
 @Component({
   selector: 'app-post-list',

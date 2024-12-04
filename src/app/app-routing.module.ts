@@ -7,12 +7,14 @@ import {LoginComponent} from "./auth/login/login.component";
 import {SignupComponent} from "./auth/signup/signup.component";
 import {authGuard} from "./auth/auth.guard";
 
+
 const routes: Routes = [
   {path: '', component: PostListComponent},
   {path: 'create', component: CreatePostComponent, canActivate: [authGuard]},
   {path: 'edit/:postId', component: CreatePostComponent, canActivate: [authGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
+
 ];
 
 @NgModule({
